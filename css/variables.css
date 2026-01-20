@@ -1,0 +1,16 @@
+/* CSS Variables*/
+
+:root {
+    /* Colors */
+    --accent: #D4A643;
+    --accent-dark: #D4A643;
+    --bg-dark: #0B1C3F;
+    --bg-light: #ffffff;
+    --text-dark: #000000;
+    --text-light: #FFFFFF;
+    --text-muted: #666666;
+
+    /* Typography */
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+}

@@ -1,0 +1,514 @@
+/* AARU Care Styles */
+
+/* AARU Care Body */
+.aarucare-body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding-top: 70px;
+    /* Account for fixed navbar */
+}
+
+/* AARU Care Hero Slider */
+.aarucare-hero-slider {
+    position: relative;
+    height: calc(100vh - 70px);
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: heroSlide 6s infinite;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SLIDE TIMING */
+.hero-slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-slide:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.hero-slide:nth-child(3) {
+    animation-delay: 8s;
+}
+
+/* FADE ANIMATION */
+@keyframes heroSlide {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.aarucare-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    z-index: 2;
+}
+
+.aarucare-hero-overlay h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin-bottom: 20px;
+}
+
+.aarucare-hero-overlay p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.aarucare-hero-overlay button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border: none;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+.aarucare-hero-overlay button p {
+    margin-left: 10px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.aarucare-hero-overlay button img {
+    margin-left: -20px;
+}
+
+/* AARU Care About */
+.aarucare-about {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.aarucare-about h2 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.aarucare-about>p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #333;
+}
+
+.aarucare-about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.aarucare-about-card {
+    background: #f8f8f8;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.aarucare-about-card h3 {
+    color: #d4a643;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.aarucare-about-card p {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.aarucare-programs {
+    background: #f8f8f8;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.aarucare-programs h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.aarucare-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* 🔥 MAIN GRID */
+.aarucare-program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+/* CARD */
+.aarucare-program-card {
+    background: transparent;
+    height: 450px;
+    width: 380px;
+    overflow: hidden;
+    text-align: left;
+    border: 2px #FFFFFF solid;
+    border-radius: 16px;
+}
+
+/* .aarucare-program-card:hover {
+    transform: translateY(-10px);
+} */
+
+/* IMAGE */
+.program-img-wrap {
+    height: 200px;
+}
+
+.program-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.program-content {
+    padding: 25px;
+}
+
+.program-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.program-content p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ICON BLOCKS */
+.aarucare-program-icons {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    flex-wrap: wrap;
+}
+
+.aarucare-icon-box {
+    padding: 50px 60px;
+    color: #fff;
+    font-weight: 600;
+    margin-left: -40px;
+    margin-right: -40px;
+    margin-top: -100px;
+}
+
+.aarucare-red {
+    background: #e74c3c;
+    align-content: center;
+}
+
+.aarucare-orange {
+    background: #f39c12;
+}
+
+.aarucare-green {
+    background: #27ae60;
+}
+
+/* AARU Care Impact */
+.aarucare-impact {
+    background-color: orangered;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.aarucare-impact h2 {
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.aarucare-impact>p {
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.aarucare-impact-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.aarucare-impact-stats div h3 {
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.aarucare-impact-stats div span {
+    color: #FFFFFF;
+}
+
+/* HANDSHAKE OVERLAY */
+.aarucare-handshake {
+    margin-top: -55px;
+    margin-left: 170px;
+}
+
+/* AARU Care CTA */
+.aarucare-cta {
+    margin-top: -104px;
+    background: gray;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.aarucare-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.aarucare-cta p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #FFFFFF;
+}
+
+.aarucare-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.aarucare-donate {
+    background: orangered;
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.aarucare-volunteer {
+    background-color: white;
+    border: 2px solid #fff;
+    color: orangered;
+    padding: 15px 35px;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* AARU Care Footer */
+.aarucare-footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.aarucare-footer-logo {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.aarucare-footer-about h4 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: #fff;
+}
+
+.aarucare-footer-about p {
+    color: #fff;
+    font-size: 0.9rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.aarucare-footer-links h4 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.aarucare-footer-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.aarucare-footer-links a:hover {
+    color: #fff;
+}
+
+.aarucare-footer-contact h4 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.aarucare-footer-contact p {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.aarucare-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.aarucare-socials a {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* AARU Care Responsive */
+@media (max-width: 992px) {
+    .aarucare-hero-slider {
+        height: 70vh;
+        min-height: 400px;
+    }
+
+    .aarucare-about-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .aarucare-program-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .aarucare-body {
+        padding-top: 60px;
+    }
+
+    .aarucare-hero-slider {
+        height: 60vh;
+        min-height: 350px;
+    }
+
+    .aarucare-hero-overlay h1 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+
+    .aarucare-about-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .aarucare-program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aarucare-impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .aarucare-footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .aarucare-footer-about p {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .aarucare-body {
+        padding-top: 55px;
+    }
+
+    .aarucare-impact-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .aarucare-cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .aarucare-donate,
+    .aarucare-volunteer {
+        width: 100%;
+    }
+}
+
+/* AARU Care Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .aarucare-about-card:active {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .aarucare-program-card:active {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .aarucare-icon-box:active {
+        transform: scale(0.95);
+    }
+
+    .aarucare-donate:active,
+    .aarucare-volunteer:active {
+        transform: scale(0.95);
+        opacity: 0.9;
+    }
+
+    .aarucare-footer-links a:active {
+        color: #d4a643;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Jangir • Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap'
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="js/components.js"></script>
+    <script src="js/api.js"></script>
+    <!-- TODO: maybe add meta tags for SEO later -->
+    <!-- oh yeah, forgot to add favicon -->
+</head>
+
+<body>
+
+    <div class="loader-container" id="loader">
+        <div class="loader">
+            <img src="images/loader-animation/rohit.png" alt="Logo" class="logo">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <script>document.write(getNavbar());</script>
+
+    <main>
+
+        <!-- Hero section -->
+        <!-- this hero looks awesome, but maybe tweak the image later -->
+        <section class="index-hero">
+            <div class="hero-container">
+                <div class="hero-left reveal-left">
+                    <h3 class="fade-in">ENTREPRENEUR | INNOVATOR | INVESTOR</h3>
+                    <h1 class="text-fade-up">Rohit Jangir</h1>
+                    <h2 class="text-fade-up" style="animation-delay: 0.2s;">Building Businesses, Empowering
+                        Entrepreneurs</h2>
+                    <p class="text-fade-up" style="animation-delay: 0.4s;">
+                        Founder & CEO of multiple companies across Mobility, Technology, Construction,
+                        and Social Impact. On a mission to empower people with ideas, innovation, and integrity.
+                    </p>
+                    <div class="hero-cta text-fade-up" style="animation-delay: 0.6s;">
+                        <a href="about.html" class="btn-primary hover-lift">Know my journey →</a>
+                        <a href="pitch.html" class="btn-secondary hover-lift">Pitch Your Idea</a>
+                    </div>
+                    <div class="hero-cta second-row text-fade-up" style="animation-delay: 0.7s;">
+                        <a href="https://calendly.com/" target="_blank" class="btn-secondary hover-lift">Book a 1:1
+                            Consultation</a>
+                    </div>
+                </div>
+
+                <div class="hero-right reveal-right">
+                    <img src="images/ventures/global/hero-profile.png" alt="Rohit Jangir" class="image-zoom">
+                </div>
+            </div>
+        </section>
+
+        <section id="ventures">
+            <h2 class="reveal">My Ventures</h2>
+
+            <div class="ventures-wrapper reveal">
+                <div class="ventures-track" id="venturesTrack">
+                    <img src="images/ventures/awt.png" class="venture-logo" alt="AWT">
+                    <img src="images/ventures/aaru-mobility.png" class="venture-logo" alt="AARU MOBILITY">
+                    <img src="images/ventures/jfam.png" class="venture-logo" alt="JFAM">
+                    <img src="images/ventures/aaru-care.png" class="venture-logo" alt="AARU CARE FOUNDATION">
+                    <img src="images/ventures/aaru.png" class="venture-logo" alt="AARU">
+                </div>
+            </div>
+        </section>
+
+        <section id="why">
+            <h2 class="reveal">Why Work With Me?</h2>
+
+            <div class="why-layout">
+                <!-- Left content -->
+                <div class="why-list stagger-children-1" style="padding: 20px;">
+
+                    <div class="why-point hover-lift">
+                        <img src="images/icons/1st-icon.png" class="why-icon" alt="Icon 1">
+                        <div>
+                            <h3>Proven Track Record</h3>
+                            <p>
+                                Successfully built and scaled multiple ventures across diverse
+                                industries, from mobility to tech to social impact.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="why-point hover-lift">
+                        <img src="images/icons/2nd-icon.png" class="why-icon" alt="Icon 2">
+                        <div>
+                            <h3>Mentorship that Matters</h3>
+                            <p>
+                                Personalized guidance tailored to your unique challenges,
+                                helping you navigate the entrepreneurial journey with confidence.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="why-point hover-lift">
+                        <img src="images/icons/3rd-icon.png" class="why-icon" alt="Icon 3">
+                        <div>
+                            <h3>Impact-Driven Approach</h3>
+                            <p>
+                                Beyond profits, I believe in creating businesses that make
+                                a positive difference in society and communities.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- hmm, this layout might need some tweaks -->
+
+                <!-- Right image -->
+                <div class="why-image reveal-right">
+                    <img src="images/ventures/global/why.png" alt="Working together" class="image-zoom">
+                </div>
+            </div>
+        </section>
+
+        <script>document.write(getCTA());</script>
+
+    </main>
+
+    <script>document.write(getFooter());</script>
+
+    <script>document.write(getModal());</script>
+
+    <script src="js/script.js"></script>
+    <script src="js/loader.js"></script>
+
+</body>
+
+</html>

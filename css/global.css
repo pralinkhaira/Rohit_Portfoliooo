@@ -1,0 +1,664 @@
+/* CSS Variables*/
+
+:root {
+
+    /* Colors */
+    --accent: #D4A643;
+    --accent-dark: #D4A643;
+    --bg-dark: #0B1C3F;
+    --bg-light: #ffffff;
+    --text-dark: #000000;
+    --text-light: #FFFFFF;
+    --text-muted: #666666;
+
+    /* Typography */
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+
+    /* Spacing */
+    --container-padding: 5%;
+    --section-padding: 60px 5%;
+}
+
+/* Responsive Typography Variables */
+:root {
+    --h1-size: clamp(2rem, 5vw, 5.8rem);
+    --h2-size: clamp(1.5rem, 4vw, 3rem);
+    --h3-size: clamp(1.2rem, 3vw, 2rem);
+    --body-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+/* CSS Reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--body-size);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-secondary);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: var(--h1-size);
+}
+
+h2 {
+    font-size: var(--h2-size);
+}
+
+h3 {
+    font-size: var(--h3-size);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Container */
+.container {
+    width: 100%;
+    padding: 0 var(--container-padding);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Responsive Sections */
+section {
+    padding: var(--section-padding);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Global Responsive Grid */
+.grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Global Flex Helpers */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   GLOBAL MEDIA QUERIES
+   ======================================== */
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    :root {
+        --container-padding: 4%;
+        --section-padding: 40px 4%;
+    }
+
+    body {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Large Mobile / Small Tablet (481px - 768px) */
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 5%;
+        --section-padding: 50px 5%;
+    }
+
+    body {
+        font-size: 0.95rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    .grid-responsive {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet / Small Laptop (769px - 992px) */
+@media (max-width: 992px) {
+    :root {
+        --section-padding: 60px 5%;
+    }
+
+    .grid-responsive {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Laptop / Desktop (993px - 1200px) */
+@media (max-width: 1200px) {
+    :root {
+        --container-padding: 5%;
+    }
+}
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1400px) {
+    :root {
+        --container-padding: 5%;
+        --section-padding: 80px 5%;
+    }
+}
+
+/* Hide elements on mobile */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Show elements only on mobile */
+@media (min-width: 769px) {
+    .show-mobile-only {
+        display: none !important;
+    }
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 768px) {
+
+    button,
+    a,
+    input,
+    textarea,
+    select {
+        min-height: 44px;
+    }
+
+    /* Mobile touch effects - replaces hover for touch devices */
+    a:active,
+    button:active {
+        opacity: 0.7;
+        transform: scale(0.98);
+    }
+
+    /* Cards and interactive elements touch effect */
+    .card:active,
+    .award-box:active,
+    .press-box:active,
+    .focus-card:active,
+    .mentorship-why-box:active,
+    .mentorship-package-box:active,
+    .expertise-card:active,
+    .resource-card:active,
+    .stat:active,
+    .timeline-item:active {
+        transform: scale(0.98);
+    }
+
+    /* Button touch feedback */
+    .btn-primary:active,
+    .btn-outline:active {
+        transform: scale(0.95);
+    }
+}
+
+/* Touch device detection - for all touch devices regardless of screen size */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Replace hover effects with active effects on touch devices */
+    a:hover,
+    button:hover {
+        opacity: 0.8;
+    }
+
+    .card:hover,
+    .award-box:hover,
+    .press-box:hover,
+    .focus-card:hover,
+    .mentorship-why-box:hover,
+    .mentorship-package-box:hover,
+    .expertise-card:hover,
+    .resource-card:hover,
+    .stat:hover,
+    .timeline-item:hover {
+        transform: none;
+    }
+
+    .card:active,
+    .award-box:active,
+    .press-box:active,
+    .focus-card:active,
+    .mentorship-why-box:active,
+    .mentorship-package-box:active,
+    .expertise-card:active,
+    .resource-card:active,
+    .stat:active,
+    .timeline-item:active {
+        transform: scale(0.98);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* ========================================
+   ENHANCED TOUCH DEVICE STYLES
+   These ensure all page-specific hover effects work via :active on touch devices
+   ======================================== */
+
+/* JFAM Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .jfam-expert-card:active {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .jfam-why-item:active {
+        background: #d4a643;
+        color: #fff;
+    }
+
+    .jfam-primary-btn:active {
+        transform: scale(1.05);
+        background: #c29538;
+    }
+
+    .jfam-testimonial-card:active {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* AARU Care Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .aarucare-about-card:active {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .aarucare-program-card:active {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .aarucare-icon-box:active {
+        transform: scale(0.95);
+    }
+
+    .aarucare-donate:active,
+    .aarucare-volunteer:active {
+        transform: scale(0.95);
+        opacity: 0.9;
+    }
+
+    .aarucare-footer-links a:active {
+        color: #d4a643;
+    }
+}
+
+/* AARU Developers Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .aarudev-service-card:active {
+        background: #d4a643;
+        color: #fff;
+    }
+
+    .aarudev-project-card:active {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .aarudev-testimonial:active {
+        background: #d4a643;
+        color: #fff;
+    }
+
+    .aarudev-footer-links a:active {
+        color: #fff;
+    }
+}
+
+/* AARU Mobility Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .aaru-how-card:active {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .aaru-play:active {
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    .aaru-footer a:active {
+        color: #fff;
+    }
+}
+
+/* ARONIX Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .aronix-service-card:active {
+        background: #d4a643;
+        color: #fff;
+        transform: translateY(-5px);
+    }
+
+    .aronix-service-card:active h3 {
+        color: #fff;
+    }
+
+    .aronix-service-card:active p {
+        color: #fff;
+    }
+
+    .aronix-btn:active {
+        transform: scale(1.05);
+    }
+
+    .aronix-join-btn:active {
+        background: rgba(224.35, 221.83, 221.83, 0.5);
+        transform: scale(0.95);
+    }
+
+    .aronix-footer-links a:active {
+        color: #d4a643;
+    }
+
+    .aronix-social-links a:active {
+        background: #d4a643;
+        transform: scale(0.9);
+    }
+
+    .aronix-service-card-inner:active {
+        border-color: #d4a643;
+        background: linear-gradient(135deg, rgba(0, 164, 90, 0.4), rgba(12, 138, 118, 0.4), rgba(9, 124, 135, 0.4));
+        transform: scale(0.98);
+    }
+}
+
+/* ARONIX Dark Theme Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .aronix-nav-link:active {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(0.98);
+    }
+
+    .aronix-join-btn:active {
+        background: rgba(224.35, 221.83, 221.83, 0.5);
+        transform: scale(0.95);
+    }
+
+    .aronix-service-card-inner:active {
+        border-color: #d4a643;
+        background: linear-gradient(135deg, rgba(0, 164, 90, 0.4), rgba(12, 138, 118, 0.4), rgba(9, 124, 135, 0.4));
+        transform: scale(0.98);
+    }
+
+    .aronix-footer-links a:active {
+        color: #d4a643;
+        transform: scale(0.98);
+    }
+
+    .aronix-social-links a:active {
+        background: #d4a643;
+        transform: scale(0.9);
+    }
+}
+
+/* Index Page Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .index-hero .btn-primary:active {
+        transform: scale(1.05);
+        background: #c29538;
+    }
+
+    .index-hero .btn-secondary:active {
+        border-color: var(--accent);
+        transform: scale(0.98);
+    }
+
+    .ventures-stat-box:active {
+        transform: translateY(-5px);
+    }
+
+    .why-point:active {
+        opacity: 0.8;
+    }
+}
+
+/* About Page Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .stat:active {
+        background: #0B1C3F;
+        color: #ffffff;
+    }
+
+    .timeline-item:active {
+        background: #D4A643;
+        border-color: #D4A643;
+        transform: scale(1.03);
+    }
+
+    .timeline-item:active .year {
+        color: #ffffff;
+    }
+
+    .timeline-item:active p {
+        color: #004E7A;
+    }
+
+    .expertise-card:active {
+        background: #D4A643;
+        transform: translateY(-5px) scale(1.03);
+    }
+
+    .expertise-card:active h3 {
+        color: #ffffff;
+    }
+
+    .expertise-card:active p {
+        color: #ffffff;
+    }
+
+    .collaboration-section .btn-primary:active {
+        transform: scale(1.15);
+    }
+}
+
+/* Mentorship Page Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .mentorship-why-box:active {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .mentorship-package-box:active {
+        transform: translateY(-5px);
+    }
+
+    .mentorship-package-box button:active {
+        background: #D4A643;
+        color: #ffffff;
+        border-color: #D4A643;
+    }
+
+    .mentorship-topics-grid span:active {
+        background: #d4a643;
+        color: #ffffff;
+    }
+
+    .mentorship-topics-grid span:active::before {
+        color: #ffffff;
+    }
+}
+
+/* Ventures Page Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .ventures-stat-box:active {
+        transform: translateY(-5px);
+    }
+
+    .featured-nav:active {
+        background: #d4a643;
+        color: #fff;
+    }
+
+    .venture-btn:active {
+        background: #d4a643;
+        color: #fff;
+    }
+}
+
+/* Media Page Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .award-box:active {
+        transform: translateY(-14px);
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.12);
+        background: #ffffff;
+    }
+
+    .award-box:active h4 {
+        color: #d4a643;
+    }
+
+    .press-box:active {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+    }
+
+    .press-box:active h4 {
+        color: #d4a643;
+    }
+
+    .press-box:active .press-icon-right {
+        transform: translateX(4px);
+        opacity: 1;
+    }
+
+    .cta-section .btn-primary:active,
+    .cta-section .btn-outline:active {
+        transform: scale(0.95);
+    }
+
+    .footer a:active {
+        color: #ffffff;
+    }
+}
+
+/* Pitch Page Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .focus-card:active {
+        transform: translateY(-6px);
+        box-shadow: 10px 15px 5px rgba(0, 0, 0, 0.12);
+    }
+
+    .upload-box:active {
+        border-color: #D4A643;
+        background: rgba(212, 166, 67, 0.05);
+    }
+
+    .pitch-form button:active {
+        transform: scale(1.03);
+    }
+
+    .process-step:active span {
+        transform: scale(1.1);
+        box-shadow: 0 10px 30px rgba(212, 166, 67, 0.3);
+    }
+}
+
+/* Resource Page Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .resource-card:active {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+    }
+}
+
+/* Fix modal overlay to not block clicks when inactive */
+.modal-overlay {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.modal-overlay.active {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+/* Fix navbar overlay */
+.navbar-overlay {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.navbar-overlay.active {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+/* Fix loader to not interfere */
+.loader-container {
+    pointer-events: none;
+}
+
+.loader-container.active {
+    pointer-events: auto;
+}

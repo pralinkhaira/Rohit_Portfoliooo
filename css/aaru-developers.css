@@ -1,0 +1,682 @@
+/* AARU Developers Styles */
+
+.aarudev-body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+    /* Account for fixed navbar */
+    background: #ffffff;
+    color: #111;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+.aarudev-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 8% 60px;
+    gap: 40px;
+}
+
+.aarudev-hero-left {
+    flex: 1;
+    max-width: 700px;
+    margin-left: 20px;
+
+}
+
+.aarudev-hero-left h1 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.aarudev-hero-left p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.aarudev-hero-left button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border: none;
+    margin-top: 20px;
+}
+
+.btn h6 {
+    font-size: 15px;
+}
+
+/* .aarudev-hero-right {
+    flex: 1;
+    position: relative;
+    width: 420px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.aarudev-hero-img {
+    position: absolute;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.aarudev-img-1 {
+    width: 260px;
+    left: 0;
+    top: 80px;
+}
+
+.aarudev-img-2 {
+    width: 220px;
+    right: 0;
+    top: 0;
+}
+
+.aarudev-img-3 {
+    width: 240px;
+    right: 40px;
+    bottom: 0;
+} */
+.aarudev-hero-right {
+    margin-right: -200px;
+    height: 80%;
+    width: 50%;
+    position: relative;
+    height: 400px;
+    /* Height to contain all absolute positioned images */
+    overflow: hidden;
+}
+
+.aarudev-hero-img {
+    width: 220px;
+    border-radius: 20px;
+    position: absolute;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.aarudev-img-1 {
+    top: 20px;
+    left: 0;
+
+}
+
+.aarudev-img-2 {
+    top: 80px;
+    left: 120px;
+}
+
+.aarudev-img-3 {
+    top: 160px;
+    left: 40px;
+}
+
+.aarudev-city-strip {
+    margin: 60px 0 40px;
+    margin-top: -200px;
+}
+
+.aarudev-city-strip img {
+    width: 100%;
+    display: block;
+}
+
+.aarudev-sponsors {
+    text-align: center;
+    padding: 40px 8%;
+    margin-top: -100px;
+}
+
+.aarudev-small-title {
+    font-size: 12px;
+    color: #7aa7ff;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+
+}
+
+.aarudev-developer-tagline {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: #3A8BEA;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: -20px;
+}
+
+.aarudev-title-tilt {
+    font-family: "Mr Dafoe", cursive;
+    font-size: 48px;
+    color: #DBE7EE;
+    transform: rotate(-8deg);
+    display: block;
+    margin-bottom: -25px;
+    letter-spacing: 0;
+    position: relative;
+}
+
+.aarudev-sponsors-h2 {
+    font-size: 28px;
+    color: #000;
+    margin: 10px 0 40px;
+    position: relative;
+}
+
+/* Ventures-style sponsor logos */
+.aarudev-ventures-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    margin: 40px 0 50px;
+    mask-image: linear-gradient(to right,
+            transparent 0%,
+            transparent 5%,
+            black 20%,
+            black 80%,
+            transparent 95%,
+            transparent 100%);
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0%,
+            transparent 5%,
+            black 20%,
+            black 80%,
+            transparent 95%,
+            transparent 100%);
+}
+
+.aarudev-ventures-track {
+    display: flex;
+    gap: 6rem;
+    padding: 1.5rem 0;
+    will-change: transform;
+}
+
+.aarudev-venture-logo {
+    height: clamp(50px, 10vw, 80px);
+    width: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.aarudev-sponsor-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.aarudev-sponsor-logos img {
+    height: 40px;
+    opacity: 0.7;
+    max-width: 120px;
+}
+
+.aarudev-services {
+    margin-top: 60px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.aarudev-service-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 14px;
+    padding: 22px 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    min-width: 140px;
+    transition: all 0.3s ease;
+}
+
+.aarudev-service-card:hover {
+    background: #d4a643;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.aarudev-service-card img {
+    width: 42px;
+    margin-bottom: 10px;
+    height: auto;
+}
+
+.aarudev-service-card span {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+}
+
+.aarudev-projects {
+    position: relative;
+    padding: 80px 8%;
+    background: #f8f8f8;
+    overflow: hidden;
+    /* Prevent circle background from causing scroll */
+}
+
+.aarudev-projects h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 60px;
+}
+
+.aarudev-circle-bg {
+    margin-top: -50px;
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    max-width: 100vw;
+    background: #d9e7f8;
+    border-radius: 50%;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.aarudev-project-grid {
+    margin-left: 260px;
+    height: auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.aarudev-project-card {
+    background: #111;
+    color: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.aarudev-project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.aarudev-project-card h4 {
+    font-size: 16px;
+    padding: 14px 16px 4px;
+}
+
+.aarudev-project-card p {
+    font-size: 12px;
+    padding: 0 16px 16px;
+    color: #ccc;
+}
+
+.aarudev-stats{ 
+    display: flex;
+    justify-content: space-between;
+    /* padding: 60px 8%; */
+    text-align: center;
+    background: white;
+}
+
+.aarudev-stat {
+    flex: 1;
+}
+
+.aarudev-stat h3 {
+    font-size: 28px;
+    color: #e44d06;
+    margin-bottom: 6px;
+}
+
+.aarudev-stat p {
+    font-size: 13px;
+    color: #e44;
+    margin-top: 6px;
+}
+
+.aarudev-testimonials {
+    padding: 80px 8%;
+    background: #f6f9ff;
+}
+
+.aarudev-testimonials h2 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.aarudev-subtitle {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 40px;
+    display: block;
+}
+
+/* .aarudev-testimonial-box {
+    display: flex;
+    gap: 30px;
+}
+
+.aarudev-testimonial {
+    flex: 1;
+    background: #eef3fb;
+    padding: 30px;
+    border-radius: 18px;
+}
+
+.aarudev-testimonial p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.aarudev-testimonial strong {
+    display: block;
+    margin-top: 16px;
+}
+
+.aarudev-stars {
+    margin-top: 8px;
+    color: #111;
+} */
+.aarudev-testimonial-wrapper {
+    background: #f1f7fd;
+    padding: 40px;
+    border-radius: 25px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.aarudev-testimonial {
+    background: #abaebb;
+    padding: 30px;
+    border-radius: 18px;
+}
+
+.aarudev-testimonial h2 {
+    font-size: 200px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.aarudev-testimonial p {
+    line-height: 1.6;
+}
+
+.aarudev-stars {
+    color: #f5b400;
+    margin-top: 10px;
+}
+
+.aarudev-footer {
+    background: #111;
+    color: #ccc;
+    padding: 60px 8%;
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.aarudev-footer-about {
+    flex: 1;
+    min-width: 250px;
+}
+
+.aarudev-footer-about img {
+    width: 80px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.aarudev-footer-about h4 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: #fff;
+}
+
+.aarudev-footer-about p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+    max-width: 300px;
+}
+
+.aarudev-footer-links {
+    min-width: 150px;
+}
+
+.aarudev-footer-links h4 {
+    color: #fff;
+    margin-bottom: 14px;
+    font-size: 16px;
+}
+
+.aarudev-footer-links a {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #999;
+    text-decoration: none;
+}
+
+.aarudev-footer-links a:hover {
+    color: #fff;
+}
+
+.aarudev-footer-contact {
+    min-width: 200px;
+}
+
+.aarudev-footer-contact h4 {
+    color: #fff;
+    margin-bottom: 14px;
+    font-size: 16px;
+}
+
+.aarudev-footer-contact p {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.aarudev-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.aarudev-socials img {
+    width: 18px;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.aarudev-socials img:hover {
+    opacity: 0.8;
+}
+
+
+/* AARU Developers Responsive */
+@media (max-width: 992px) {
+    .aarudev-hero {
+        flex-direction: column;
+        padding: 50px 5% 50px;
+        gap: 30px;
+    }
+
+    .aarudev-testimonial-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .aarudev-body {
+        padding-top: 60px;
+    }
+
+    .aarudev-hero-left h1 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+
+    .aarudev-sponsor-logos {
+        gap: 20px;
+    }
+
+    .aarudev-project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aarudev-testimonial-box {
+        grid-template-columns: 1fr;
+    }
+
+    .aarudev-footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .aarudev-footer-about p {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .aarudev-body {
+        padding-top: 55px;
+    }
+
+    .aarudev-service-card {
+        padding: 15px 20px;
+    }
+
+    .aarudev-services {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .aarudev-hero {
+        flex-direction: column;
+    }
+
+    .aarudev-project-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .aarudev-stats {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .aarudev-testimonial-box {
+        flex-direction: column;
+    }
+
+    .aarudev-hero-right {
+        width: 100%;
+        max-width: 420px;
+        height: 300px;
+    }
+
+    .aarudev-circle-bg {
+        width: 600px;
+        height: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+    .aarudev-project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aarudev-services {
+        flex-direction: column;
+    }
+
+    .aarudev-footer {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .aarudev-hero-left h1 {
+        font-size: 32px;
+    }
+
+    .aarudev-sponsors h2,
+    .aarudev-projects h2,
+    .aarudev-testimonials h2 {
+        font-size: 24px;
+    }
+
+    .aarudev-circle-bg {
+        width: 400px;
+        height: 400px;
+        top: 200px;
+    }
+
+    .aarudev-hero-right {
+        height: 250px;
+    }
+
+    .aarudev-img-1 {
+        width: 180px;
+        top: 50px;
+    }
+
+    .aarudev-img-2 {
+        width: 150px;
+    }
+
+    .aarudev-img-3 {
+        width: 160px;
+    }
+}
+
+/* AARU Developers Touch Styles */
+@media (hover: none) and (pointer: coarse) {
+    .aarudev-service-card:active {
+        background: #d4a643;
+        color: #fff;
+    }
+
+    .aarudev-project-card:active {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .aarudev-testimonial:active {
+        background: #d4a643;
+        color: #fff;
+    }
+
+    .aarudev-footer-links a:active {
+        color: #fff;
+    }
+}

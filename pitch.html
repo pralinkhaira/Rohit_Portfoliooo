@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='UTF-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohit Jangir • Pitch Your Idea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="js/components.js"></script>
+    <script src="js/api.js"></script>
+    <!-- remember to add form validation script -->
+</head>
+
+<body>
+
+    <div class="loader-container" id="loader">
+        <div class="loader">
+            <img src="images/loader-animation/rohit.png" alt="Logo" class="logo">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="loading-text">LOADING</div>
+    </div>
+
+    <script>document.write(getNavbar());</script>
+
+    <main>
+        <!-- PITCH HERO -->
+        <!-- hero text might be too long, shorten later -->
+        <section class="pitch-hero reveal">
+            <h1 class="text-fade-up">PITCH YOUR IDEAS</h1>
+            <p class="text-fade-up" style="animation-delay: 0.3s;">
+                Have a groundbreaking idea? Looking for investment or strategic partnership?
+                I'm always interested in backing innovative ventures and collaborating with passionate entrepreneurs.
+            </p>
+        </section>
+
+        <!-- WHAT I LOOK FOR -->
+        <section class="pitch-focus">
+            <h2>What I Look For</h2>
+
+            <div class="focus-grid">
+                <div class="focus-card">
+                    <img src="images/pitch/Light-On.png" alt="Innovation" class="focus-icon">
+                    <h3>Innovation</h3>
+                    <p>Unique solutions that solve real problems in creative ways</p>
+                </div>
+
+                <div class="focus-card">
+                    <img src="images/pitch/Total-Sales.png" alt="Scalability" class="focus-icon">
+                    <h3>Scalability</h3>
+                    <p>Business models with potential for rapid and sustainable growth with ₹100+ Cr total sales</p>
+                </div>
+
+                <div class="focus-card">
+                    <img src="images/pitch/User-Account.png" alt="Team" class="focus-icon">
+                    <h3>Team</h3>
+                    <p>Passionate founders with the drive and expertise to execute</p>
+                </div>
+        </section>
+
+        <section class="pitch-form-section">
+            <form class="pitch-form">
+
+                <h2>Submit Your Pitch</h2>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        <small class="error-message"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="company">Company / Startup Name *</label>
+                        <input type="text" id="company" name="company" placeholder="Enter company name" required>
+                        <small class="error-message"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="sector">Sector *</label>
+                        <input type="text" id="sector" name="sector" placeholder="e.g., Technology, Healthcare, Finance"
+                            required>
+                        <small class="error-message"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="investment">Investment Required *</label>
+                        <input type="text" id="investment" name="investment" placeholder="e.g., ₹10 Lakhs, ₹1 Crore"
+                            required>
+                        <small class="error-message"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <small class="error-message"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Contact Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        <small class="error-message"></small>
+                    </div>
+                </div>
+
+
+                <div class="form-field">
+                    <label for="Pitch">Pitch Summary *</label>
+                    <textarea id="pitch-summary" name="pitchSummary" rows="5"
+                        placeholder="Describe your business idea, market opportunity, and growth potential"
+                        required></textarea>
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-field">
+                    <label for="file-upload">Upload Proposal / Pitch Deck (Optional)</label>
+                    <div class="upload-box" id="upload-box">
+                        <input type="file" id="file-upload" name="fileUpload" accept=".pdf,.ppt,.pptx,.doc,.docx"
+                            hidden>
+                        <div class="upload-content">
+                            <p>Click to upload or drag and drop</p>
+                            <span>PDF, PPT, or DOCX (Max 10MB)</span>
+                        </div>
+                        <div class="file-info" style="display: none;">
+                            <span class="file-name"></span>
+                            <span class="remove-file">×</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submit-btn">
+                        <span class="btn-text">Submit Pitch</span>
+                        <span class="btn-loader" style="display: none;"></span>
+                    </button>
+
+                    <div class="form-message" id="form-message"></div>
+
+                    <!-- <small>
+                        Submissions will be reviewed and responded to at
+                        <strong>connect@rohitjangir.in</strong>
+                    </small> -->
+
+            </form>
+        </section>
+
+        <!-- INVESTMENT PROCESS -->
+        <section class="investment-process">
+            <h2>The Investment Process</h2>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <span>1</span>
+                    <h4>Submit Pitch</h4>
+                    <p>Share your business idea and proposal</p>
+                </div>
+
+                <div class="process-step">
+                    <span>2</span>
+                    <h4>Initial Review</h4>
+                    <p>Assessment of idea and market potential</p>
+                </div>
+
+                <div class="process-step">
+                    <span>3</span>
+                    <h4>Meeting</h4>
+                    <p>Detailed discussion and due diligence</p>
+                </div>
+
+                <div class="process-step">
+                    <span>4</span>
+                    <h4>Partnership</h4>
+                    <p>Investment and strategic collaboration</p>
+                </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <script>document.write(getCTA());</script>
+
+    </main>
+
+    <script>document.write(getFooter());</script>
+
+    <script>document.write(getModal());</script>
+
+    <script src="js/script.js"></script>
+
+    <!-- Pitch Form Submission Handler -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const pitchForm = document.querySelector('.pitch-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formMessage = document.getElementById('form-message');
+            const uploadBox = document.getElementById('upload-box');
+            const fileInput = document.getElementById('file-upload');
+            const fileInfo = uploadBox.querySelector('.file-info');
+            const fileName = fileInfo.querySelector('.file-name');
+            const removeFileBtn = fileInfo.querySelector('.remove-file');
+
+            // File upload handling
+            uploadBox.addEventListener('click', () => fileInput.click());
+
+            uploadBox.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadBox.style.borderColor = '#007bff';
+            });
+
+            uploadBox.addEventListener('dragleave', () => {
+                uploadBox.style.borderColor = '#ccc';
+            });
+
+            uploadBox.addEventListener('drop', (e) => {
+                e.preventDefault();
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    fileInput.files = files;
+                    updateFileDisplay();
+                }
+            });
+
+            fileInput.addEventListener('change', updateFileDisplay);
+
+            function updateFileDisplay() {
+                if (fileInput.files.length > 0) {
+                    const file = fileInput.files[0];
+                    fileName.textContent = file.name;
+                    uploadBox.querySelector('.upload-content').style.display = 'none';
+                    fileInfo.style.display = 'flex';
+                }
+            }
+
+            removeFileBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                fileInput.value = '';
+                uploadBox.querySelector('.upload-content').style.display = 'block';
+                fileInfo.style.display = 'none';
+            });
+
+            // Form validation
+            function validateForm() {
+                let isValid = true;
+                const requiredFields = pitchForm.querySelectorAll('[required]');
+
+                requiredFields.forEach(field => {
+                    const errorElement = field.parentElement.querySelector('.error-message');
+                    if (!field.value.trim()) {
+                        errorElement.textContent = 'This field is required';
+                        isValid = false;
+                    } else {
+                        errorElement.textContent = '';
+                    }
+
+                    // Email validation
+                    if (field.type === 'email' && field.value.trim()) {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(field.value)) {
+                            field.parentElement.querySelector('.error-message').textContent = 'Please enter a valid email';
+                            isValid = false;
+                        }
+                    }
+                });
+
+                return isValid;
+            }
+
+            // Form submission
+            pitchForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                // Validate form
+                if (!validateForm()) {
+                    formMessage.style.color = '#f44336';
+                    formMessage.textContent = '✗ Please fill all required fields correctly.';
+                    return;
+                }
+
+                // Show loading state
+                submitBtn.disabled = true;
+                const btnText = submitBtn.querySelector('.btn-text');
+                const btnLoader = submitBtn.querySelector('.btn-loader');
+                btnText.style.display = 'none';
+                btnLoader.style.display = 'inline';
+
+                try {
+                    // Collect form data including file
+                    const formData = formatPitchData(pitchForm.elements);
+
+                    console.log("Form data prepared:", {
+                        ...formData,
+                        file: formData.file ? `${formData.file.name} (${formData.file.size} bytes)` : 'No file'
+                    });
+
+                    // Submit pitch data
+                    const result = await submitPitch(formData);
+
+                    if (result.success) {
+                        formMessage.style.color = '#4CAF50';
+                        formMessage.textContent = '✓ Pitch submitted successfully! We\'ll review and get back to you soon.';
+                        pitchForm.reset();
+                        uploadBox.querySelector('.upload-content').style.display = 'block';
+                        fileInfo.style.display = 'none';
+                        fileInput.value = '';
+                    } else {
+                        formMessage.style.color = '#f44336';
+                        formMessage.textContent = '✗ Error submitting pitch: ' + result.error;
+                    }
+                } catch (error) {
+                    formMessage.style.color = '#f44336';
+                    formMessage.textContent = '✗ Error submitting pitch. Please try again.';
+                    console.error('Error:', error);
+                } finally {
+                    submitBtn.disabled = false;
+                    btnText.style.display = 'inline';
+                    btnLoader.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <!-- Process Steps Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const processSteps = document.querySelectorAll('.process-step');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            processSteps.forEach(function (step) {
+                observer.observe(step);
+            });
+        });
+    </script>
+
+    <script src="js/loader.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+/* ==============================
+   Resources Page Styles
+   ============================== */
+
+/* HERO */
+.resources-hero {
+    background: linear-gradient(180deg, #0d1b2a, #101828);
+    color: #ffffff;
+    text-align: center;
+    padding: 150px 0px;
+}
+
+.resources-hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.resources-hero p {
+    max-width: 760px;
+    margin: auto;
+    font-size: 1.05rem;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+/* SECTION */
+.resources-section {
+    background: #ffffff;
+    padding: 60px 20px;
+}
+
+.resources-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #000000;
+}
+
+/* GRID */
+.resources-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+/* CARD */
+.resource-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    outline: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE */
+.resource-card img,
+.resource-card .card-image {
+    width: 100%;
+    height: 45px;
+    object-fit: cover;
+    display: block;
+}
+
+/* CONTENT */
+.card-content {
+    padding: 18px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-content h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    color: #000;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    flex-grow: 1;
+}
+
+.read-more {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #D4A643;
+}
+
+/* CTA SECTION*/
+.cta-section {
+    background: linear-gradient(180deg, #0b1d3a, #08152b);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.cta-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.cta-section p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.cta-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: #d4a643;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn-outline {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .resources-hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .resources-section {
+        padding: 40px 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resources-hero h1 {
+        font-size: 2rem;
+    }
+}

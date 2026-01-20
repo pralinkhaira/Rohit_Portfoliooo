@@ -1,0 +1,655 @@
+/* Pitch Page Styles */
+
+/* HERO */
+.pitch-hero {
+    margin-top: 80px;
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #101C35 10%, #D4A643 100%);
+    text-align: center;
+}
+
+.pitch-hero h1 {
+    color: #ffffff;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    line-height: 1.2;
+}
+
+.pitch-hero p {
+    color: #cbd5e1;
+    max-width: 780px;
+    margin: 0 auto;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    line-height: 1.7;
+}
+
+/* WHAT I LOOK FOR */
+.pitch-focus {
+    padding: 60px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.pitch-focus h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 40px;
+    color: #000;
+    text-align: center;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.focus-card {
+    background: #f8f8f8;
+    padding: 40px 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.focus-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 10px 15px 5px rgba(0, 0, 0, 0.12);
+}
+
+.focus-card .icon {
+    font-size: 42px;
+    color: #D4A643;
+    margin-bottom: 15px;
+}
+
+.focus-card .focus-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.focus-card h3 {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.focus-card p {
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    color: #444;
+}
+
+/* SUBMIT PITCH FORM */
+.pitch-form-section {
+    background: #ffffff;
+    padding: 40px 20px;
+    margin-bottom: 0px;
+}
+
+.pitch-form {
+    max-width: 1000px;
+    margin: auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.pitch-form h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 30px;
+    color: #000;
+    text-align: center;
+}
+
+.form-section-title {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin: 25px 0 15px;
+    color: #000;
+    text-align: left;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-field label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #D4A643;
+    box-shadow: 0 0 0 3px rgba(212, 166, 67, 0.2);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+.form-intro {
+    text-align: center;
+    color: #666;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.pitch-form textarea {
+    margin-top: 20px;
+    resize: none;
+    min-height: 120px;
+}
+
+.upload-box {
+    margin: 25px 0;
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.upload-box p {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.upload-box span {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.pitch-form button {
+    width: 50%;
+    height: 60px;
+    background: #D4A643;
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-width: 200px;
+}
+
+.pitch-form button:hover {
+    transform: scale(1.03);
+}
+
+.pitch-form small {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #000000;
+}
+
+/* INVESTMENT PROCESS */
+.investment-process {
+    padding: 40px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.investment-process h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: 50px;
+    color: #000000;
+    text-align: center;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.process-step {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    padding: 20px;
+}
+
+.process-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delays for each step */
+.process-step:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.process-step:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.process-step:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.process-step:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.process-step span {
+    width: clamp(60px, 10vw, 90px);
+    height: clamp(60px, 10vw, 90px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #D4A643;
+    color: #ffffff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 3vw, 2.5rem);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step.visible span {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(212, 166, 67, 0.3);
+}
+
+.process-step h4 {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    margin-bottom: 12px;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.process-step p {
+    font-size: clamp(0.85rem, 2vw, 1.1rem);
+    color: #000000;
+}
+
+/* ── Form Message ── */
+.form-message {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    background: rgba(39, 174, 96, 0.1);
+    color: #27ae60;
+    border: 1px solid #27ae60;
+}
+
+.form-message.error {
+    display: block;
+    background: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+/* ── Button Loading State ── */
+.pitch-form button {
+    width: 100%;
+    max-width: 300px;
+    background: #D4A643;
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 20px auto 0;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pitch-form button:hover {
+    transform: scale(1.03);
+}
+
+.pitch-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-loader {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.form-field.error input,
+.form-field.error textarea {
+    border-color: #e74c3c;
+}
+
+.form-field.error .error-message {
+    display: block;
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.form-field.valid input,
+.form-field.valid textarea {
+    border-color: #27ae60;
+}
+
+.form-field.valid .error-message {
+    display: none;
+}
+
+.upload-box {
+    margin: 25px 0;
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.upload-box>label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left;
+}
+
+.upload-box:hover {
+    border-color: #D4A643;
+    background: rgba(212, 166, 67, 0.05);
+}
+
+.upload-box.dragover {
+    border-color: #D4A643;
+    background: rgba(212, 166, 67, 0.15);
+    transform: scale(1.02);
+}
+
+.upload-box.has-file {
+    border-style: solid;
+    border-color: #27ae60;
+    background: rgba(39, 174, 96, 0.08);
+}
+
+.upload-box.error {
+    border-color: #e74c3c;
+}
+
+.upload-box p {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.upload-box span {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.file-info {
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(39, 174, 96, 0.1);
+    border-radius: 8px;
+}
+
+.file-info .file-name {
+    font-weight: 500;
+    color: #27ae60;
+    word-break: break-all;
+}
+
+.file-info .remove-file {
+    display: inline-block;
+    margin-left: 10px;
+    color: #e74c3c;
+    font-size: 1.2rem;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+}
+
+.file-info .remove-file:hover {
+    transform: scale(1.2);
+}
+
+.upload-size-error {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    display: none;
+}
+
+.upload-box.error .upload-size-error {
+    display: block;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.form-field {
+    position: relative;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #D4A643;
+    box-shadow: 0 0 0 3px rgba(212, 166, 67, 0.2);
+}
+
+/*  PITCH PAGE RESPONSIVE STYLES*/
+
+/* Tablet (769px - 992px) */
+@media (max-width: 992px) {
+    .pitch-hero {
+        padding: 80px 5% 60px;
+    }
+
+    .pitch-form {
+        padding: 35px;
+    }
+
+    .form-grid {
+        gap: 20px;
+    }
+}
+
+/* Mobile Navigation (up to 768px) */
+@media (max-width: 768px) {
+    .pitch-hero {
+        margin-top: 70px;
+        padding: 60px 5% 40px;
+    }
+
+    .pitch-hero h1 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    .pitch-focus {
+        padding: 40px 5%;
+    }
+
+    .pitch-form {
+        padding: 25px 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    }
+
+    .pitch-form h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-field input,
+    .form-field textarea {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+
+    .upload-box {
+        padding: 30px 15px;
+    }
+
+    .pitch-form button {
+        height: 50px;
+        font-size: 0.95rem;
+    }
+
+    .investment-process {
+        padding: 40px 5%;
+    }
+
+    .investment-process h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-bottom: 30px;
+    }
+
+    .process-grid {
+        gap: 20px;
+    }
+
+    .process-step {
+        padding: 15px;
+    }
+}
+
+/* Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+    .pitch-hero {
+        margin-top: 60px;
+        padding: 50px 4% 30px;
+    }
+
+    .pitch-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .pitch-hero p {
+        font-size: 0.9rem;
+    }
+
+    .pitch-focus {
+        padding: 30px 4%;
+    }
+
+    .pitch-focus h2 {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+
+    .focus-card {
+        padding: 25px 20px;
+    }
+
+    .pitch-form {
+        padding: 20px 15px;
+    }
+
+    .pitch-form h2 {
+        font-size: 1.3rem;
+    }
+
+    .form-section-title {
+        font-size: 1rem;
+        margin: 20px 0 10px;
+    }
+
+    .upload-box {
+        padding: 25px 15px;
+        margin: 20px 0;
+    }
+
+    .pitch-form button {
+        width: 100%;
+        max-width: 100%;
+        height: 48px;
+        font-size: 0.9rem;
+    }
+
+    .investment-process {
+        padding: 30px 4%;
+    }
+
+    .investment-process h2 {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+
+    .process-step h4 {
+        font-size: 1rem;
+    }
+
+    .process-step p {
+        font-size: 0.85rem;
+    }
+}

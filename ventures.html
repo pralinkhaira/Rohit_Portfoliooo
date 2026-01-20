@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Ventures | Rohit Jangir</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="js/components.js"></script>
+</head>
+
+<body>
+
+    <script>document.write(getNavbar());</script>
+
+    <section class="ventures-hero">
+        <div class="ventures-hero-content">
+            <h1>MY VENTURES</h1>
+            <p>
+                A diverse portfolio of businesses spanning mobility, technology,
+                real estate, and social impact. Each venture is built on innovation,
+                sustainability, and a commitment to excellence.
+            </p>
+        </div>
+    </section>
+
+    <section class="ventures-stats">
+        <div class="ventures-stats-grid">
+            <div class="ventures-stat-box">
+                <h3>₹25+ Cr</h3>
+                <p>Portfolio Value</p>
+            </div>
+            <div class="ventures-stat-box">
+                <h3>100+</h3>
+                <p>Team Members</p>
+            </div>
+            <div class="ventures-stat-box">
+                <h3>10+</h3>
+                <p>Industries</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventures new design -->
+    <section class="ventures-map-section">
+        <div class="ventures-map">
+            <div class="ventures-map-bg">
+                <img src="images/ventures/global/world-map.png" alt="World Map">
+            </div>
+
+            <!-- CENTER - RJ LOGO at top center -->
+            <div class="venture-center">
+                <img src="images/logos/rj-logo.png" alt="Rohit Jangir">
+            </div>
+
+            <!-- SVG CONNECTORS - Lines from RJ logo center to each venture node center -->
+            <svg class="venture-lines" viewBox="0 0 1000 400" preserveAspectRatio="none">
+                <!-- Line from RJ logo center (500, 95) to JFAM center (85, 315) -->
+                <path class="connector-line jfam-line" d="M500 95 L 500 200 L 85 200 L 85 315" stroke="#2ecc71"
+                    stroke-width="2" fill="none" />
+                <!-- Line from RJ logo center (500, 95) to MOBILITY center (265, 315) -->
+                <path class="connector-line mobility-line" d="M500 95 L 500 200 L 265 200 L 265 315" stroke="#e74c3c"
+                    stroke-width="2" fill="none" />
+                <!-- Line from RJ logo center (500, 95) to DEVELOPERS center (500, 315) -->
+                <path class="connector-line developers-line" d="M500 95 L 500 315" stroke="#e056fd" stroke-width="2"
+                    fill="none" />
+                <!-- Line from RJ logo center (500, 95) to ARONIX center (735, 315) -->
+                <path class="connector-line aronix-line" d="M500 95 L 500 200 L 735 200 L 735 315" stroke="#6c5ce7"
+                    stroke-width="2" fill="none" />
+                <!-- Line from RJ logo center (500, 95) to CARE center (915, 315) -->
+                <path class="connector-line care-line" d="M500 95 L 500 200 L 915 200 L 915 315" stroke="#0984e3"
+                    stroke-width="2" fill="none" />
+            </svg>
+
+            <!-- JFAM - left -->
+            <div class="venture-node jfam">
+                <a href="JFAM.html">
+                    <img src="images/ventures/jfam.png" alt="JFAM">
+                </a>
+                <div class="venture-text">
+                    <h4>JFAM</h4>
+                    <p>Multidisciplinary firm delivering interior design, architecture and construction projects.</p>
+                </div>
+            </div>
+
+            <!-- AARU MOBILITY - left-center -->
+            <div class="venture-node mobility">
+                <a href="AARU-MOBILITY.html">
+                    <img src="images/ventures/aaru-mobility.png" alt="AARU Mobility">
+                </a>
+                <div class="venture-text">
+                    <h4>AARU MOBILITY</h4>
+                    <p>Corporate transport and premium mobility solutions.</p>
+                </div>
+            </div>
+
+            <!-- AARU DEVELOPERS - center (below RJ) -->
+            <div class="venture-node developers">
+                <a href="AARU-DEVELOPER.html">
+                    <img src="images/ventures/aaru.png" alt="AARU Developers">
+                </a>
+                <div class="venture-text">
+                    <h4>AARU DEVELOPERS</h4>
+                    <p>Residential and commercial real estate development.</p>
+                </div>
+            </div>
+
+            <!-- ARONIX - right-center -->
+            <div class="venture-node aronix">
+                <a href="ARONIX-WEB.html">
+                    <img src="images/aronix/original-AWT.png" alt="Aronix Web Technology">
+                </a>
+                <div class="venture-text">
+                    <h4>ARONIX WEB TECHNOLOGY</h4>
+                    <p>Web, UI/UX, branding and digital solutions.</p>
+                </div>
+            </div>
+
+            <!-- AARU CARE - right -->
+            <div class="venture-node care">
+                <a href="AARU-CARE.html">
+                    <img src="images/ventures/aaru-care.png" alt="AARU Care Foundation">
+                </a>
+                <div class="venture-text">
+                    <h4>AARU CARE FOUNDATION</h4>
+                    <p>Non-profit focused on education and community welfare.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script>document.write(getCTA());</script>
+
+    <script>document.write(getFooter());</script>
+
+    <script>document.write(getModal());</script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

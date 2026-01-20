@@ -1,0 +1,717 @@
+/* VENTURES PAGE RESPONSIVE STYLES */
+
+/* VENTURES PAGE*/
+.ventures-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #101C35 20%, #D4A643 100%);
+    padding: 120px 20px 60px;
+    text-align: center;
+}
+
+.ventures-hero-content {
+    max-width: 900px;
+}
+
+.ventures-hero h1 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.ventures-hero p {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: #ffffff;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.ventures-stats {
+    padding: 60px 5%;
+    background: #fafafa;
+    text-align: center;
+}
+
+.ventures-stats-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.ventures-stat-box {
+    background: #fafafa;
+    border-radius: 18px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border: 2px solid #d4a643;
+    min-width: 180px;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 250px;
+}
+
+.ventures-stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.ventures-stat-box h3 {
+    color: #d4a643;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: 8px;
+}
+
+.ventures-stat-box p {
+    color: #000000;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+}
+
+.ventures-section {
+    padding: 80px 5%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.ventures-section h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+/* FEATURED VENTURES*/
+.featured-ventures {
+    padding: 60px 6%;
+    background: #ffffff;
+}
+
+.featured-title {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+/* WRAPPER */
+.featured-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.featured-nav {
+    width: clamp(35px, 6vw, 45px);
+    height: clamp(35px, 6vw, 45px);
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    font-size: clamp(1rem, 2vw, 1.6rem);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.featured-nav:hover {
+    background: #d4a643;
+    color: #fff;
+}
+
+/* GRID*/
+.featured-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+}
+
+/*  CARDS */
+.featured-venture-card {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    min-height: 200px;
+}
+
+.featured-venture-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
+
+.featured-venture-card.small {
+    height: 160px;
+}
+
+/*OVERLAY*/
+.venture-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.85));
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.venture-brand {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    opacity: 0.85;
+    margin-bottom: 10px;
+}
+
+.venture-overlay h2 {
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+/*BUTTON */
+.venture-btn {
+    align-self: flex-start;
+    padding: 10px 22px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: clamp(0.85rem, 2vw, 0.9rem);
+}
+
+.venture-btn:hover {
+    background: #d4a643;
+    color: #fff;
+}
+
+
+/* VENTURES MAP SECTION */
+.ventures-map-section {
+    position: relative;
+    min-height: 100vh;
+    background: #f4f4f4;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.ventures-map {
+    position: relative;
+    max-width: 1200px;
+    height: 450px;
+    margin: auto;
+    overflow: visible;
+}
+
+.ventures-map-bg{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;               
+    overflow: hidden;
+}
+
+.ventures-map-bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;            
+    
+}
+
+
+/* SVG LINES */
+.venture-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.connector-line {
+    stroke-width: 3;
+    opacity: 0.8;
+}
+
+/* CENTER CARD - RJ LOGO at top center */
+.venture-center {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    width: clamp(120px, 20vw, 180px);
+    height: clamp(120px, 20vw, 180px);
+    background: #ffffff;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 0 0 5px #fff,
+        0 25px 60px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+.venture-center img {
+    /* width: 95%;
+    height: 95%; */
+    max-width: 250px;
+    max-height: 250px;
+    object-fit: contain;
+    display: block;
+}
+
+/* COMMON CARD - Equal sized boxes */
+.venture-node {
+    position: absolute;
+    background: #fff;
+    border-radius: 20px;
+    padding: 12px;
+    box-shadow:
+        0 0 0 4px #fff,
+        0 15px 40px rgba(0, 0, 0, 0.12);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(75px, 14vw, 100px);
+    height: clamp(75px, 14vw, 100px);
+}
+
+.venture-node img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    display: block;
+}
+
+.venture-node a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* TEXT - positioned below the node */
+.venture-text {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    width: clamp(150px, 22vw, 220px);
+    pointer-events: none;
+}
+
+
+.venture-text h4 {
+    font-size: clamp(0.8rem, 2vw, 14px);
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1a1a2e;
+}
+
+.venture-text p {
+    font-size: clamp(0.7rem, 1.4vw, 12px);
+    line-height: 1.4;
+    color: #000000;
+    margin: 0;
+    max-width: 100%;
+}
+
+/* Horizontal Node Positions - All nodes below RJ logo */
+.venture-node.jfam {
+    bottom: 40px;
+    left: 50px;
+    border-bottom: 4px solid #2ecc71;
+}
+
+.venture-node.mobility {
+    bottom: 40px;
+    left: 270px;
+    border-bottom: 4px solid #e74c3c;
+}
+
+.venture-node.developers {
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 4px solid #e056fd;
+}
+
+.venture-node.aronix {
+    bottom: 40px;
+    right: 260px;
+    border-bottom: 4px solid #6c5ce7;
+}
+
+.venture-node.care {
+    bottom: 40px;
+    right: 50px;
+    border-bottom: 4px solid #0984e3;
+}
+
+/* VENTURES MAP RESPONSIVE */
+
+@media (max-width: 900px) {
+    .ventures-map {
+        height: 420px;
+    }
+
+    .venture-center {
+        width: clamp(100px, 16vw, 140px);
+        height: clamp(100px, 16vw, 140px);
+    }
+
+    .venture-node {
+        width: clamp(65px, 12vw, 90px);
+        height: clamp(65px, 12vw, 90px);
+        padding: 10px;
+    }
+
+    .venture-node.jfam {
+        left: 30px;
+    }
+
+    .venture-node.mobility {
+        left: 180px;
+    }
+
+    .venture-node.developers {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .venture-node.aronix {
+        right: 180px;
+    }
+
+    .venture-node.care {
+        right: 30px;
+    }
+
+    .venture-text {
+        width: clamp(130px, 20vw, 180px);
+    }
+}
+
+/* VENTURES PAGE RESPONSIVE*/
+
+/* Tablet (769px - 992px) */
+@media (max-width: 992px) {
+    .ventures-hero {
+        min-height: 50vh;
+        padding: 100px 5% 50px;
+    }
+
+    .ventures-stats {
+        padding: 50px 5%;
+    }
+
+    .ventures-section {
+        padding: 60px 5%;
+    }
+
+    .featured-ventures {
+        padding: 50px 5%;
+    }
+
+    .ventures-map-section {
+        padding: 60px 0;
+    }
+
+    .ventures-map {
+        max-width: 600px;
+        height: 500px;
+    }
+}
+
+/* Mobile Navigation (up to 768px) */
+@media (max-width: 768px) {
+    .ventures-hero {
+        min-height: auto;
+        padding: 80px 5% 40px;
+    }
+
+    .ventures-hero h1 {
+        font-size: clamp(1.6rem, 5vw, 2rem);
+    }
+
+    .ventures-hero p {
+        font-size: 0.95rem;
+    }
+
+    .ventures-stats {
+        padding: 40px 5%;
+    }
+
+    .ventures-stat-box {
+        padding: 25px 30px;
+        min-width: 140px;
+    }
+
+    .ventures-section {
+        padding: 50px 5%;
+    }
+
+    .ventures-section h2 {
+        font-size: clamp(1.4rem, 4vw, 1.8rem);
+        margin-bottom: 30px;
+    }
+
+    .venture-logo {
+        height: clamp(80px, 15vw, 150px);
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-venture-card.large {
+        height: 280px;
+    }
+
+    .featured-venture-card.small {
+        height: 140px;
+    }
+
+    /* Vertical layout for mobile */
+    .ventures-map-section {
+        padding: 40px 5%;
+        overflow: visible;
+    }
+
+    .ventures-map {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        min-height: auto;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        overflow: visible;
+    }
+
+    /* Hide SVG lines on mobile */
+    .venture-lines {
+        display: none;
+    }
+
+    /* Center logo at top */
+    .venture-center {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 140px;
+        height: 140px;
+        margin-bottom: 20px;
+    }
+
+    /* Stack all nodes vertically - make them card-like containers */
+    .venture-node {
+        position: relative;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        width: 100%;
+        max-width: 320px;
+        min-height: auto;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        border-bottom: 4px solid;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .venture-node a {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+    }
+
+    .venture-node img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .venture-node.jfam {
+        border-bottom-color: #2ecc71;
+    }
+
+    .venture-node.mobility {
+        border-bottom-color: #e74c3c;
+    }
+
+    .venture-node.developers {
+        border-bottom-color: #e056fd;
+    }
+
+    .venture-node.aronix {
+        border-bottom-color: #6c5ce7;
+    }
+
+    .venture-node.care {
+        border-bottom-color: #0984e3;
+    }
+
+    /* Text below each node - now properly contained */
+    .venture-text {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        pointer-events: auto;
+        text-align: center;
+    }
+
+    .venture-text h4 {
+        font-size: clamp(1rem, 3vw, 1.1rem);
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: #1a1a2e;
+    }
+
+    .venture-text p {
+        font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+        line-height: 1.5;
+        color: #000000;
+        margin: 0;
+    }
+}
+
+/* Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+    .ventures-hero {
+        padding: 70px 4% 30px;
+    }
+
+    .ventures-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .ventures-stats {
+        padding: 30px 4%;
+    }
+
+    .ventures-stat-box {
+        padding: 20px 25px;
+        min-width: 120px;
+        flex: 1 1 140px;
+    }
+
+    .ventures-stat-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .ventures-stat-box p {
+        font-size: 0.8rem;
+    }
+
+    .ventures-section {
+        padding: 40px 4%;
+    }
+
+    .ventures-section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .venture-logo {
+        height: 80px;
+    }
+
+    .featured-ventures {
+        padding: 40px 4%;
+    }
+
+    .featured-venture-card.large {
+        height: 220px;
+    }
+
+    .featured-venture-card.small {
+        height: 120px;
+    }
+
+    .venture-overlay {
+        padding: 20px;
+    }
+
+    .venture-overlay h2 {
+        font-size: 1.3rem;
+    }
+
+    .venture-btn {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+
+    /* Small mobile adjustments for vertical layout */
+    .ventures-map-section {
+        padding: 30px 4%;
+    }
+
+    .ventures-map {
+        gap: 25px;
+    }
+
+    .venture-center {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+
+    .venture-node {
+        max-width: 100%;
+        padding: 18px 15px;
+        gap: 12px;
+    }
+
+    .venture-node a {
+        width: 90px;
+        height: 90px;
+    }
+
+    .venture-text {
+        width: 100%;
+    }
+
+    .venture-text h4 {
+        font-size: clamp(0.95rem, 3vw, 1.05rem);
+        margin-bottom: 6px;
+    }
+
+    .venture-text p {
+        font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+        line-height: 1.4;
+    }
+}

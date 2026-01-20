@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resources & Tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="js/components.js"></script>
+</head>
+
+<body>
+
+    <div class="loader-container" id="loader">
+        <div class="loader">
+            <img src="images/loader-animation/rohit.png" alt="Logo" class="logo">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="loading-text">LOADING</div>
+    </div>
+
+    <script>document.write(getNavbar());</script>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="resources-hero">
+            <h1>RESOURCES & TOOLS</h1>
+            <p>
+                Free resources, templates, and insights to help you build and grow your business.
+                Learn from real experiences and practical frameworks.
+            </p>
+        </section>
+
+        <!-- RESOURCES SECTION -->
+        <section class="resources-section">
+            <h2>Latest Articles & Insights</h2>
+
+            <div class="resources-grid">
+
+                <!-- CARD 1 -->
+                <a href="article1.html" class="resource-card">
+                    <img src="images/resources/rohit.png" alt="Startup Launch">
+                    <div class="card-content">
+                        <h3>10 Essential Steps to Launch Your Startup</h3>
+                        <p>
+                            A comprehensive guide to turning your idea into a successful business venture.
+                        </p>
+                        <span class="read-more">Read More →</span>
+                    </div>
+                </a>
+
+                <!-- CARD 2 -->
+                <a href="article1.html" class="resource-card">
+                    <img src="images/resources/Mask-group1.png" alt="Startup Launch">
+                    <div class="card-content">
+                        <h3>10 Essential Steps to Launch Your Startup</h3>
+                        <p>
+                            A comprehensive guide to turning your idea into a successful business venture.
+                        </p>
+                        <span class="read-more">Read More →</span>
+                    </div>
+                </a>
+                <!-- CARD 3 -->
+                <a href="article1.html" class="resource-card">
+                    <img src="images/resources/Mask-group2.png" alt="Startup Launch">
+                    <div class="card-content">
+                        <h3>10 Essential Steps to Launch Your Startup</h3>
+                        <p>
+                            A comprehensive guide to turning your idea into a successful business venture.
+                        </p>
+                        <span class="read-more">Read More →</span>
+                    </div>
+                </a>
+                <!-- CARD 4 -->
+                <a href="article1.html" class="resource-card">
+                    <img src="images/resources/Mask-group3.png" alt="Startup Launch">
+                    <div class="card-content">
+                        <h3>10 Essential Steps to Launch Your Startup</h3>
+                        <p>
+                            A comprehensive guide to turning your idea into a successful business venture.
+                        </p>
+                        <span class="read-more">Read More →</span>
+                    </div>
+                </a>
+
+                <!-- CARD 5 -->
+                <a href="article1.html" class="resource-card">
+                    <img src="images/resources/why.png" alt="Startup Launch">
+                    <div class="card-content">
+                        <h3>10 Essential Steps to Launch Your Startup</h3>
+                        <p>
+                            A comprehensive guide to turning your idea into a successful business venture.
+                        </p>
+                        <span class="read-more">Read More →</span>
+                    </div>
+                </a>
+
+                <!-- CARD 6 -->
+                <a href="article1.html" class="resource-card">
+                    <img src="images/resources/rohit1.png" alt="Startup Launch">
+                    <div class="card-content">
+                        <h3>10 Essential Steps to Launch Your Startup</h3>
+                        <p>
+                            A comprehensive guide to turning your idea into a successful business venture.
+                        </p>
+                        <span class="read-more">Read More →</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section">
+            <h2>Ready to Transform Your Vision?</h2>
+            <p>
+                Whether you're looking for investment, mentorship, or collaboration,
+                let's explore how we can create something extraordinary together.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="pitch.html" class="btn-primary">Pitch Your Idea</a>
+                <a href="https://calendly.com/" target="_blank" class="btn-outline">Book Mentorship</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="connectModal">
+        <div class="connect-card">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <h2>Connect with us</h2>
+            <p class="subtitle">Stay up to date with all the latest from us.</p>
+            <form class="connect-form">
+                <label>Name*</label>
+                <input type="text" required>
+                <label>Email*</label>
+                <input type="email" required>
+                <label>Purpose*</label>
+                <input type="text" required>
+                <label>Message*</label>
+                <textarea rows="3" required></textarea>
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </div>
+    </div>
+
+    <script>document.write(getFooter());</script>
+
+    <script>document.write(getModal());</script>
+
+    <script src="js/script.js"></script>
+    <script src="js/loader.js"></script>
+</body>
+
+</html>

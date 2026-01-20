@@ -1,0 +1,312 @@
+/* CTA Section & Connect Modal*/
+
+/* CTA SECTION */
+.cta-section {
+    background: linear-gradient(135deg, #0b1630, #111d3c);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-section h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+}
+
+.cta-section p {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    font-size: 18px;
+    opacity: 0.9;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.cta-section .btn-primary {
+    background: #D4A643;
+    color: #FFFFFF;
+    padding: 16px 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+}
+
+.cta-section .btn-primary:hover {
+    background: #c29538;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section .btn-outline {
+    background: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 16px 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+}
+
+.cta-section .btn-outline:hover {
+    background: #FFFFFF;
+    color: #0b1630;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* CONNECT MODAL */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.connect-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 460px;
+    padding: 50px 40px;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+    line-height: 1;
+    background: transparent;
+    border: none;
+    padding: 5px;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.connect-card h2 {
+    font-size: 1.5rem;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.connect-card .subtitle {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.connect-form {
+    text-align: left;
+}
+
+.connect-form label {
+    display: block;
+    font-size: 0.85rem;
+    color: #444;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.connect-form input,
+.connect-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+}
+
+.connect-form input:focus,
+.connect-form textarea:focus {
+    border-color: #d4a643;
+}
+
+.connect-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.connect-form button {
+    width: 100%;
+    padding: 14px 30px;
+    background: #d4a643;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(212, 166, 67, 0.3);
+}
+
+.connect-form button:hover {
+    background: #c29538;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(212, 166, 67, 0.45);
+}
+
+/* ========================================
+   CTA SECTION RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet (769px - 992px) */
+@media (max-width: 992px) {
+    .cta-section {
+        padding: 60px 5%;
+    }
+
+    .cta-section h2 {
+        font-size: 28px;
+    }
+
+    .cta-section p {
+        font-size: 16px;
+        max-width: 600px;
+    }
+}
+
+/* Mobile Navigation (up to 768px) */
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 50px 5%;
+    }
+
+    .cta-section h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .cta-section p {
+        font-size: 15px;
+        margin: 0 auto 25px;
+        max-width: 500px;
+    }
+
+    .cta-buttons {
+        gap: 15px;
+    }
+
+    .cta-section .btn-primary,
+    .cta-section .btn-outline {
+        padding: 14px 28px;
+        font-size: 15px;
+        min-width: 150px;
+    }
+
+    .connect-card {
+        padding: 40px 30px;
+        max-width: 420px;
+    }
+
+    .connect-card h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+    .cta-section {
+        padding: 40px 4%;
+    }
+
+    .cta-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .cta-section p {
+        font-size: 0.9rem;
+        margin: 0 auto 20px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .cta-section .btn-primary,
+    .cta-section .btn-outline {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .connect-card {
+        padding: 35px 20px;
+        max-width: 100%;
+    }
+
+    .connect-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .connect-card .subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .connect-form input,
+    .connect-form textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .connect-form button {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+}

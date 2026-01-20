@@ -1,0 +1,64 @@
+/* CSS Variables & Custom Properties */
+@import url("variables.css");
+
+/* Global Reset & Base Styles */
+@import url("global.css");
+
+/* Navigation */
+@import url("navbar.css");
+
+/* Footer */
+@import url("footer.css");
+
+/* CTA Section & Connect Modal */
+@import url("cta.css");
+
+/* Home / Index Page */
+@import url("index.css");
+
+/* About Page */
+@import url("about.css");
+
+/* Pitch Page */
+@import url("pitch.css");
+
+/* Mentorship Page */
+@import url("mentorship.css");
+
+/* Ventures Page */
+@import url("ventures.css");
+
+/* Media & Press Page */
+@import url("media.css");
+
+/* Resources Page */
+@import url("resource.css");
+
+
+/* Sub-Brand Pages (JFAM, AARU Care, AARU Mobility, AARU Developers, ARONIX) */
+@import url("jfam.css");
+@import url("aaru-care.css");
+@import url("aaru-developers.css");
+@import url("aaru-mobility.css");
+/* aronix-web.css removed - now only loaded in ARONIX-WEB.html */
+
+
+/* CSS ARCHITECTURE SUMMARY   
+   1. variables.css        - CSS custom properties (CSS variables)
+   2. global.css           - Reset and base styles
+   3. navbar.css           - Navigation component
+   4. footer.css           - Footer component
+   5. cta.css              - CTA sections and modal
+   6. index.css            - Home page
+   7. about.css            - About page
+   8. pitch.css            - Pitch page
+   9. mentorship.css       - Mentorship page
+   10. ventures.css        - Ventures page
+   11. media.css           - Media & press page
+   12. resource.css        - Resources page
+   13. jfam.css            - JFAM brand page
+   14. aaru-care.css       - AARU Care brand page
+   15. aaru-developers.css - AARU Developers brand page
+   16. aaru-mobility.css   - AARU Mobility brand page
+   17. aronix-web.css      - ARONIX brand page
+    */

@@ -1,0 +1,649 @@
+/* MAIN NAVBAR COMPONENT STYLES
+   Used by: index.html, about.html, ventures.html, 
+            pitch.html, mentorship.html, resource.html, media.html */
+
+/* Base Header */
+.navbar-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(253, 253, 254, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(30, 42, 68, 0.5);
+    padding: 0.9rem 5%;
+    transition: all 0.3s ease;
+}
+
+.navbar-header.scrolled {
+    padding: 0.65rem 5%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Nav Container */
+.navbar-nav {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+}
+
+/* Logo */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+}
+
+.navbar-logo img {
+    height: 250px;
+    width: auto;
+}
+
+/* Desktop Navigation Links */
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 2.9rem;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-links a {
+    font-weight: 500;
+    font-size: 0.96rem;
+    color: rgb(4, 4, 4);
+    transition: color 0.25s ease;
+    padding: 0.4rem 0;
+}
+
+.navbar-links a:hover {
+    color: var(--accent);
+}
+
+/* Dropdown */
+.navbar-dropdown {
+    position: relative;
+}
+
+.navbar-dropdown>a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar-dropdown>a::after {
+    content: " ▾";
+    font-size: 0.75rem;
+    margin-left: 4px;
+}
+
+.navbar-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    min-width: 180px;
+    padding: 10px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-top: 8px;
+}
+
+.navbar-dropdown:hover .navbar-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+
+.navbar-dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #000000;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.navbar-dropdown-menu li a:hover {
+    background: #ffffff;
+    color: var(--accent);
+}
+
+/* CTA Button */
+.navbar-btn {
+    padding: 0.5rem 1.3rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+    border: 2px solid #D4A643;
+    border-radius: 25px;
+    background: #D4A643;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar-btn:hover {
+    background: #D4A643;
+    transform: scale(1.15);
+    box-shadow: 0 0px 0px rgba(212, 166, 67, 0.4);
+}
+
+/* MOBILE NAVIGATION STYLES*/
+
+/* Hamburger Menu Button */
+.navbar-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.navbar-hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.navbar-hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Nav Overlay */
+.navbar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-overlay.active {
+    opacity: 1;
+}
+
+/* Mobile Navigation Menu */
+.navbar-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 1000;
+    padding: 80px 30px 40px;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-mobile.active {
+    right: 0;
+}
+
+.navbar-mobile-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-mobile-links li {
+    margin-bottom: 5px;
+}
+
+.navbar-mobile-links a {
+    display: block;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+    transition: color 0.3s ease;
+}
+
+.navbar-mobile-links a:hover {
+    color: var(--accent);
+}
+
+/* Mobile Dropdown */
+.navbar-mobile-dropdown {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.navbar-mobile-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    text-align: left;
+    width: 100%;
+}
+
+.navbar-mobile-toggle::after {
+    content: " ▾";
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.navbar-mobile-toggle.active::after {
+    transform: rotate(180deg);
+}
+
+.navbar-mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.navbar-mobile-menu.open {
+    max-height: 500px;
+}
+
+.navbar-mobile-menu a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-mobile-menu a:hover {
+    color: var(--accent);
+}
+
+/* Mobile CTA Button */
+.navbar-mobile-cta {
+    margin-top: 30px;
+}
+
+.navbar-mobile-cta .navbar-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 1rem;
+}
+
+/* SUB-BRAND NAVBAR STYLES
+   Used by: AARU-CARE.html, AARU-DEVELOPER.html,
+            AARUU-MOBILITY.html, ARONIX-WEB.html, JFAM.html*/
+
+/* Sub-brand Header */
+.navbar-subbrand {
+    background: #ffffff;
+    padding: 0.8rem 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-subbrand .navbar-nav {
+    max-width: 1400px;
+}
+
+/* Sub-brand Logo */
+.navbar-subbrand-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Sub-brand Logo Image */
+.navbar-subbrand-logo-img {
+    height: 100px !important;
+    width: auto;
+}
+
+/* Sub-brand Back Button */
+.navbar-subbrand-back {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-subbrand-back:hover {
+    color: #D4A643;
+}
+
+/* Responsive for Sub-brand */
+@media (max-width: 768px) {
+    .navbar-subbrand {
+        padding: 0.7rem 5%;
+    }
+
+    .navbar-subbrand-logo-img {
+        height: 30px !important;
+    }
+
+    .navbar-subbrand-back {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-subbrand-logo-img {
+        height: 28px !important;
+    }
+
+    .navbar-subbrand-back {
+        font-size: 0.8rem;
+    }
+}
+
+/* JFAM BRAND NAVBAR STYLES*/
+.navbar-jfam {
+    background: #faf8f5;
+    border-bottom-color: #c9a66b;
+}
+
+.navbar-jfam .navbar-subbrand-back {
+    color: #5c4a3d;
+}
+
+.navbar-jfam .navbar-subbrand-back:hover {
+    color: #c9a66b;
+}
+
+@media (max-width: 768px) {
+    .navbar-jfam {
+        padding: 0.7rem 5%;
+    }
+
+    .navbar-jfam .navbar-subbrand-logo-img {
+        height: 30px !important;
+    }
+
+    .navbar-jfam .navbar-subbrand-back {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-jfam .navbar-subbrand-logo-img {
+        height: 28px !important;
+    }
+
+    .navbar-jfam .navbar-subbrand-back {
+        font-size: 0.8rem;
+    }
+}
+
+/* AARU CARE BRAND NAVBAR STYLES
+   Brand Colors: Warm, compassionate, caring tones */
+.navbar-aarucare {
+    background: #fefefe;
+    border-bottom-color: #e8a87c;
+}
+
+.navbar-aarucare .navbar-subbrand-back {
+    color: #5a4a42;
+}
+
+.navbar-aarucare .navbar-subbrand-back:hover {
+    color: #e8a87c;
+}
+
+@media (max-width: 768px) {
+    .navbar-aarucare {
+        padding: 0.7rem 5%;
+    }
+
+    .navbar-aarucare .navbar-subbrand-logo-img {
+        height: 30px !important;
+    }
+
+    .navbar-aarucare .navbar-subbrand-back {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-aarucare .navbar-subbrand-logo-img {
+        height: 28px !important;
+    }
+
+    .navbar-aarucare .navbar-subbrand-back {
+        font-size: 0.8rem;
+    }
+}
+
+/* AARU DEVELOPERS BRAND NAVBAR STYLES */
+.navbar-aarudev {
+    background: #ffffff;
+    border-bottom-color: #2c5282;
+}
+
+.navbar-aarudev .navbar-subbrand-back {
+    color: #2d3748;
+}
+
+.navbar-aarudev .navbar-subbrand-back:hover {
+    color: #2c5282;
+}
+
+@media (max-width: 768px) {
+    .navbar-aarudev {
+        padding: 0.7rem 5%;
+    }
+
+    .navbar-aarudev .navbar-subbrand-logo-img {
+        height: 30px !important;
+    }
+
+    .navbar-aarudev .navbar-subbrand-back {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-aarudev .navbar-subbrand-logo-img {
+        height: 28px !important;
+    }
+
+    .navbar-aarudev .navbar-subbrand-back {
+        font-size: 0.8rem;
+    }
+}
+
+/* AARU MOBILITY BRAND NAVBAR STYLES*/
+.navbar-aaru {
+    background: #1a1a2e;
+    border-bottom-color: #00d4aa;
+}
+
+.navbar-aaru .navbar-subbrand-logo-img {
+    filter: brightness(1.1);
+}
+
+.navbar-aaru .navbar-subbrand-back {
+    color: #ffffff;
+}
+
+.navbar-aaru .navbar-subbrand-back:hover {
+    color: #00d4aa;
+}
+
+@media (max-width: 768px) {
+    .navbar-aaru {
+        padding: 0.7rem 5%;
+    }
+
+    .navbar-aaru .navbar-subbrand-logo-img {
+        height: 30px !important;
+    }
+
+    .navbar-aaru .navbar-subbrand-back {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-aaru .navbar-subbrand-logo-img {
+        height: 28px !important;
+    }
+
+    .navbar-aaru .navbar-subbrand-back {
+        font-size: 0.8rem;
+    }
+}
+
+/* ARONIX BRAND NAVBAR STYLES */
+.navbar-aronix {
+    background: rgba(10, 10, 20, 0.95);
+    border-bottom-color: #6366f1;
+}
+
+.navbar-aronix .navbar-subbrand-logo-img {
+    height: 50px !important;
+    filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5));
+}
+
+.navbar-aronix .navbar-subbrand-back {
+    color: #e0e7ff;
+}
+
+.navbar-aronix .navbar-subbrand-back:hover {
+    color: #818cf8;
+}
+
+@media (max-width: 768px) {
+    .navbar-aronix {
+        padding: 0.7rem 5%;
+    }
+
+    .navbar-aronix .navbar-subbrand-logo-img {
+        height: 30px !important;
+    }
+
+    .navbar-aronix .navbar-subbrand-back {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-aronix .navbar-subbrand-logo-img {
+        height: 28px !important;
+    }
+
+    .navbar-aronix .navbar-subbrand-back {
+        font-size: 0.8rem;
+    }
+}
+
+/* RESPONSIVE STYLES - MAIN NAVBAR*/
+
+/* Tablet (769px - 992px) */
+@media (max-width: 992px) {
+    .navbar-links {
+        gap: 2rem;
+    }
+
+    .navbar-links a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile Navigation (up to 768px) */
+@media (max-width: 768px) {
+    .navbar-header {
+        padding: 0.8rem 5%;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar-hamburger {
+        display: flex;
+    }
+
+    .navbar-overlay {
+        display: block;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
+
+    .navbar-logo img {
+        height: 50px;
+    }
+}
+
+/* Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+    .navbar-header {
+        padding: 0.7rem 4%;
+    }
+
+    .navbar-logo img {
+        height: 40px;
+    }
+
+    .navbar-hamburger {
+        width: 24px;
+        height: 18px;
+    }
+
+    .navbar-mobile {
+        width: 90%;
+        padding: 70px 20px 30px;
+    }
+
+    .navbar-mobile-links a {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+
+    .navbar-mobile-toggle {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+
+    .navbar-mobile-cta {
+        margin-top: 20px;
+    }
+}
