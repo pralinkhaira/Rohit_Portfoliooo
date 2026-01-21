@@ -12,6 +12,87 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <script src="js/components.js"></script>
+
+    <!-- Navbar overrides: logo, connect button, hamburger -->
+    <style>
+        /* logo size (existing rules kept and made more specific) */
+        nav img[src*="rj-logo"],
+        .navbar img[src*="rj-logo"],
+        .nav-logo img,
+        .brand img[src*="rj-logo"],
+        img[alt*="Rohit"] {
+            height: 56px !important;
+            width: auto !important;
+            max-height: 64px !important;
+        }
+
+        /* connect / CTA button — reduce visual footprint */
+        nav .connect,
+        nav .connect-button,
+        nav .btn-connect,
+        nav .connect-btn,
+        nav .cta,
+        nav .cta-button,
+        nav a[href*="connect"],
+        .connect, .connect-button, .btn-connect {
+            font-size: 14px !important;
+            padding: 6px 10px !important;
+            height: auto !important;
+            line-height: 1 !important;
+            border-radius: 6px !important;
+        }
+
+        /* hamburger / menu toggle — smaller square and icon */
+        nav .hamburger,
+        nav .menu-toggle,
+        nav .nav-toggle,
+        nav .navbar-toggle,
+        .burger,
+        button[aria-label*="menu"],
+        button[aria-label*="toggle"] {
+            width: 36px !important;
+            height: 36px !important;
+            padding: 6px !important;
+            font-size: 18px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        nav .hamburger svg,
+        nav .menu-toggle svg,
+        .burger svg,
+        button[aria-label*="menu"] svg {
+            width: 20px !important;
+            height: 20px !important;
+        }
+
+        @media (max-width: 600px) {
+            nav img[src*="rj-logo"],
+            .navbar img[src*="rj-logo"],
+            img[alt*="Rohit"] {
+                height: 44px !important;
+            }
+
+            nav .connect,
+            nav .connect-button,
+            nav .btn-connect,
+            nav .connect-btn,
+            nav .cta,
+            nav .cta-button {
+                font-size: 13px !important;
+                padding: 4px 8px !important;
+            }
+
+            nav .hamburger,
+            nav .menu-toggle,
+            nav .nav-toggle,
+            .burger,
+            button[aria-label*="menu"] {
+                width: 34px !important;
+                height: 34px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>

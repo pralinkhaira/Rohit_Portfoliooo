@@ -1,0 +1,197 @@
+/* Responsive overrides for ARONIX-WEB page */
+
+/* Additional responsive overrides */
+@media (max-width: 1280px) {
+    .main-container {
+        max-width: 1100px;
+        min-height: auto !important;
+    }
+
+    .hero-section {
+        padding: 120px 20px;
+        min-height: 95vh;
+    }
+
+    /* normalize vertical spacing: use section padding instead of element margins */
+    .hero-content { margin-bottom: 0 !important; max-width: 80%; }
+    .hero-section, .stats-section, .services-section, .vision-section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .orbital-container {
+        width: min(85vw, 900px);
+        height: min(85vw, 900px);
+        top: 55%;
+    }
+
+    .orbit-1 { width: 26vw; height: 26vw; }
+    .orbit-2 { width: 42vw; height: 42vw; }
+    .orbit-3 { width: 58vw; height: 58vw; }
+
+    .tech-icon { width: 52px; height: 52px; }
+    .awt-logo-center { width: 110px; height: 110px; }
+}
+
+@media (max-width: 1024px) {
+    .hero-section { padding: 100px 16px; }
+    .hero-title { font-size: 56px; width: auto; height: auto; }
+    .hero-subtitle { font-size: 20px; width: auto; }
+    .hero-content { margin-bottom: 0 !important; }
+
+    .orbital-container {
+        width: 92vw;
+        height: 92vw;
+        top: 52%;
+    }
+
+    .orbit-1 { width: 22vw; height: 22vw; }
+    .orbit-2 { width: 38vw; height: 38vw; }
+    .orbit-3 { width: 56vw; height: 56vw; }
+
+    .tech-icon { width: 48px; height: 48px; }
+    .awt-logo-center { width: 100px; height: 100px; }
+
+    .services-title { font-size: 72px; white-space: normal; }
+    .world-map-container { max-width: 90%; height: auto; }
+
+    /* normalize vertical spacing on medium screens */
+    .hero-section, .stats-section, .services-section, .vision-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .main-container { min-height: auto !important; }
+}
+
+@media (max-width: 768px) {
+    .main-container { padding: 0 8px; }
+    .hero-section { padding: 80px 12px; min-height: 80vh; }
+    .hero-title { font-size: 40px; line-height: 1.15; margin-bottom: 10px; }
+    .hero-subtitle { font-size: 16px; }
+    .hero-content { max-width: 95%; margin-bottom: 0 !important; }
+
+    .orbital-container {
+        position: absolute;
+        width: 100vw;
+        height: 100vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -48%);
+    }
+
+    .orbit-1 { width: 20vw; height: 20vw; }
+    .orbit-2 { width: 40vw; height: 40vw; }
+    .orbit-3 { width: 60vw; height: 60vw; }
+
+    .tech-icon { width: 44px; height: 44px; padding: 6px; }
+    .awt-logo-center { width: 90px; height: 90px; }
+
+    .services-title { font-size: 48px; white-space: normal; letter-spacing: -1px; }
+    .services-image { max-width: 95%; }
+
+    /* Overlay the title on top of the map on small screens */
+    .stats-section { position: relative; padding-top: 40px; }
+    .stats-content { position: relative; display: flex; flex-direction: column; align-items: center; }
+    .stats-title {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        font-size: 40px !important;
+        width: 90% !important;
+        z-index: 6 !important;
+        text-align: center !important;
+        white-space: normal !important;
+        padding: 0 8px !important;
+    }
+
+    .world-map-container { position: relative; z-index: 1; height: auto; padding: 10px 0; margin: 0; display: flex; align-items: center; justify-content: center; }
+    .world-map-container svg { max-width: 92%; height: auto; display: block; }
+
+    /* normalize vertical spacing on small screens */
+    .hero-section, .stats-section, .services-section, .vision-section {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    /* make sure main container doesn't force big height */
+    .main-container { min-height: auto !important; }
+
+    /* Hide many absolute decorative elements that break mobile layout */
+    .ellipse, .ellipse-26, .ellipse-27, .ellipse-28, .ellipse-29, .ellipse-32, .ellipse-33,
+    .decorative-circle, .decorative-group, .group38, .group39, .group40, .sparkling, .group146 {
+        display: none !important;
+    }
+
+    /* Stack hero content vertically and center */
+    .hero-section {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        text-align: center !important;
+        margin: 0 auto !important;
+        max-width: 95% !important;
+    }
+
+    /* Make orbital elements smaller and centered behind content */
+    .orbital-container {
+        position: absolute !important;
+        width: 80vw !important;
+        height: 80vw !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: 55% !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
+    }
+
+    .orbital-circle { left: 50% !important; top: 50% !important; }
+
+}
+
+@media (max-width: 480px) {
+    .hero-section { padding: 60px 12px; }
+    .hero-title { font-size: 32px; }
+    .hero-subtitle { font-size: 14px; }
+    .join-us-btn { width: 140px; height: 48px; }
+
+    .orbital-container { width: 110vw; height: 110vw; top: 52%; }
+    .orbit-1 { width: 28vw; height: 28vw; }
+    .orbit-2 { width: 48vw; height: 48vw; }
+    .orbit-3 { width: 72vw; height: 72vw; }
+
+    .tech-icon { width: 40px; height: 40px; }
+    .awt-logo-center { width: 72px; height: 72px; }
+
+    .services-title { font-size: 36px; }
+    .vision-title { font-size: 36px; }
+    .vision-description { font-size: 15px; }
+
+    .footer-content { gap: 20px; }
+}
+
+/* Minor accessibility / layout helpers */
+.services-title, .vision-title, .hero-title {
+    word-break: break-word;
+}
+
+/* Ensure content is pushed below fixed navbar on smaller viewports */
+@media (max-width: 1024px) {
+    .main-container {
+        padding-top: 80px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* slightly smaller offset on very small screens */
+    .main-container {
+        padding-top: 72px !important;
+    }
+    /* also ensure hero section uses top padding instead of negative margin */
+    .hero-section { padding-top: calc(72px + 20px) !important; }
+}
